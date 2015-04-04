@@ -18,35 +18,37 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
+
+<meta name="viewport" content="width=320"/>
+
 <style type="text/css">
 html {
   background: #E6E6E6;
   overflow: hidden;
 }
+
 body {
-/*  -webkit-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-*/}
-
-p {
-  font-size: 128px;
-  font-family: 'AppleColorEmoji';
 }
 
 .center {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.vertical-align {
   position: fixed;
-  top: 38%;
-  left: 46%;
+
+  top: 30%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  left: 30%;
+  -webkit-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
 }
 
-.spin-right {
-  -webkit-animation-name: spin-right;
+.spin-none {
+  -webkit-animation-name: spin-none;
   -webkit-animation-duration: 4000ms;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -59,26 +61,26 @@ p {
   -ms-animation-iteration-count: infinite;
   -ms-animation-timing-function: linear;
 
-  animation-name: spin-right;
+  animation-name: spin-none;
   animation-duration: 4000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-@-ms-keyframes spin-right {
+@-ms-keyframes spin-none {
     from { -ms-transform: rotate(0deg); }
-    to { -ms-transform: rotate(360deg); }
+    to { -ms-transform: rotate(0deg); }
 }
-@-moz-keyframes spin-right {
+@-moz-keyframes spin-none {
     from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0deg); }
 }
-@-webkit-keyframes spin-right {
+@-webkit-keyframes spin-none {
     from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0deg); }
 }
-@keyframes spin-right {
+@keyframes spin-none {
     from { transform:rotate(0deg); }
-    to { transform:rotate(360deg); }
+    to { transform:rotate(0deg); }
 }
 .spin-left {
   -webkit-animation-name: spin-left;
@@ -115,15 +117,10 @@ p {
     from { transform:rotate(360deg); }
     to { transform:rotate(0deg); }
 }
-#rays {
-  position: fixed;
-  top: 35%;
-  left: 44%;
-}
 </style>
 </head>
 <body>
-  <img id="rays" class="center spin-left" src="rays.png">
-  <p id="poop" class="center vertical-align">🐺</p>
+  <img class="center spin-left" src="rays.png">
+  <img class="center spin-none" src="/wolf-face2.png">
 </body>
 </html>
