@@ -1,0 +1,116 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+html {
+  background: #E6E6E6;
+  overflow: hidden;
+}
+body {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+p {
+  font-size: 128px;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vertical-align {
+  position: relative;
+  top: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.spin-right {
+  -webkit-animation-name: spin-right;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 4000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 4000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+
+  animation-name: spin-right;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@-ms-keyframes spin-right {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin-right {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin-right {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin-right {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+.spin-left {
+  -webkit-animation-name: spin-left;
+  -webkit-animation-duration: 10000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 10000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 10000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+
+  animation-name: spin-left;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@-ms-keyframes spin-left {
+    from { -ms-transform: rotate(360deg); }
+    to { -ms-transform: rotate(0deg); }
+}
+@-moz-keyframes spin-left {
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0deg); }
+}
+@-webkit-keyframes spin-left {
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0deg); }
+}
+@keyframes spin-left {
+    from { transform:rotate(360deg); }
+    to { transform:rotate(0deg); }
+}
+#rays {
+  position: fixed;
+  top: 38%;
+  left: 42%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+</style>
+</head>
+<body>
+  <img id="rays" class="center spin-left" src="rays.png">
+  <p id="poop" class="center vertical-align spin-right">💩</p>
+</body>
+</html>
