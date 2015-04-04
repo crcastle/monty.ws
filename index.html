@@ -7,10 +7,10 @@ html {
   overflow: hidden;
 }
 body {
-  -webkit-transform-style: preserve-3d;
+/*  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-}
+*/}
 
 p {
   font-size: 128px;
@@ -22,11 +22,9 @@ p {
 }
 
 .vertical-align {
-  position: relative;
-  top: 40%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+  position: fixed;
+  top: 38%;
+  left: 46%;
 }
 
 .spin-right {
@@ -101,16 +99,13 @@ p {
 }
 #rays {
   position: fixed;
-  top: 38%;
-  left: 42%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 35%;
+  left: 44%;
 }
 </style>
 </head>
 <body>
   <img id="rays" class="center spin-left" src="rays.png">
-  <p id="poop" class="center vertical-align spin-right">🐺</p>
+  <p id="poop" class="center vertical-align">🐺</p>
 </body>
 </html>
